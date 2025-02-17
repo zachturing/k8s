@@ -17,6 +17,7 @@ func restClientDemo() {
 	if err != nil {
 		panic("can't create client, err:" + err.Error())
 	}
+	// 设置api版本
 	config.GroupVersion = &corev1.SchemeGroupVersion
 	config.NegotiatedSerializer = scheme.Codecs
 	config.APIPath = "/api"
